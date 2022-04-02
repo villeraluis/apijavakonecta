@@ -11,7 +11,7 @@
 
 
 
-1.  clone el repositorio de github en su maquina local, puede realizarse desde una terminal con el comando git clone https://github.com/villeraluis/apikonecta.git.
+1.  clone el repositorio de github en su maquina local, puede realizarse desde una terminal con el comando git clone https://github.com/villeraluis/apijavakonecta.git.
 2.  crear una base de datos limpia con el nombre preferido(en este caso se usa el nombre konecta2 ), se puede realizar con su gestor preferido(phpmyadmin,workbench,ems..) 
 3.  luego ingresar a la carpeta del proyecto con cd apikonecta
 4.  habra en un editor de texto como block de notas o editor de codigo el archivo de configuracion de base de datos que se encuetra en: apikonecta\src\main\resources\application.properties
