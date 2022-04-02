@@ -27,14 +27,20 @@
 
 SELECT * FROM   productos WHERE stock=(SELECT MAX(stock) FROM productos LIMIT 1);
 
-# consulta 1 requrida por la prueba.
+## consulta 2 requrida por la prueba.
 
 2.Realizar una consulta que permita conocer cuál es el producto más vendido.
+
+
+SELECT * FROM productos INNER JOIN (SELECT fk_producto, sum(cantidad_venta) as can_vendidos FROM ventas group by fk_producto ORDER BY can_vendidos DESC LIMIT 1) AS ve ON id=ve.fk_producto;
+
 
 ## se puede revisar una pequeña implementacion inicial que se realizo del frontend desde elsiguiente repositorio y segir los pasos de un proyecto react
 
 https://github.com/villeraluis/frontInicialapikonecta.git
-SELECT * FROM productos INNER JOIN (SELECT fk_producto, sum(cantidad_venta) as can_vendidos FROM ventas group by fk_producto ORDER BY can_vendidos DESC LIMIT 1) AS ve ON id=ve.fk_producto;
+
+## tambien se incluyo una coleccion postman con la que se realizaron alguna pruebas y una pequeña copia de la base de datos
+
 
 
 
