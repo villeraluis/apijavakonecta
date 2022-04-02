@@ -1,12 +1,12 @@
 # apikonecta
-prueba tecnica 1 para konecta
+# 1 prueba tecnica 1 para konecta
 
-# requisitos previos
+## requisitos previos
 
-# 1. tener instalada una version de jdk java 8 o superior
-# 2. motor de base de datos mysql y algun gestor de base de datos 
+## 1. tener instalada una version de jdk java 8 o superior
+## 2. motor de base de datos mysql y algun gestor de base de datos 
 
-# 3. para instalar el software se deben seguir los siguientes pasos.
+## 3. para instalar el software se deben seguir los siguientes pasos.
 
 
 
@@ -31,6 +31,9 @@ SELECT * FROM   productos WHERE stock=(SELECT MAX(stock) FROM productos LIMIT 1)
 
 2.Realizar una consulta que permita conocer cuál es el producto más vendido.
 
+## se puede revisar una pequeña implementacion inicial que se realizo del frontend desde elsiguiente repositorio y segir los pasos de un proyecto react
+
+https://github.com/villeraluis/frontInicialapikonecta.git
 SELECT * FROM productos INNER JOIN (SELECT fk_producto, sum(cantidad_venta) as can_vendidos FROM ventas group by fk_producto ORDER BY can_vendidos DESC LIMIT 1) AS ve ON id=ve.fk_producto;
 
 
